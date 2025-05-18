@@ -9,6 +9,15 @@ def generate_password(length=12):
         password += random.choice(characters)
     return password
 
+def test_len():
+    password = generate_password(100)
+    assert len(password) == 100
+
+def povtorenie():
+    password1 = generate_password(10)
+    password2 = generate_password(10)
+    assert password1 == password2
+
 # Пример использования
-password_length = 12  # Вы можете выбрать любую длину пароля
+password_length = 13  # Вы можете выбрать любую длину пароля
 print("Ваш новый пароль:", generate_password(password_length))
