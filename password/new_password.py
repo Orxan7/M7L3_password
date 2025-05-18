@@ -1,14 +1,13 @@
-import random
-import string
+import random, string
 
 def generate_password(length=12):
-    """Генерация случайного пароля заданной длины."""
-    characters = string.ascii_letters + string.digits + string.punctuation
-    password = ''
-    for i in range(length):
-        password += random.choice(characters)
-    return password
+    letters, digits, symbols = string.ascii_letters, string.digits, string.punctuation
+    pns = ["LLDDSSLLDDSS", "LDLSLDLSLDLS", "LLLDDDSSSLLL", "LDSLDSLDSLDS", "LLDDSDLLDDSD"]
+    pn = random.choice(pns)
+    pn += ''.join(random.choices(letters + digits + symbols, k=max(0, length - len(pn))))
+    pn = pn[:length]
+    pc = [random.choice(letters) if c == 'L' else random.choice(digits) if c == 'D' else random.choice(symbols) if c == 'S' else c for c in pn]
+    random.shuffle(pc)
+    return ''.join(pc)
 
-# Пример использования
-password_length = 12  # Вы можете выбрать любую длину пароля
-print("Ваш новый пароль:", generate_password(password_length))
+print(generate_password(12))
