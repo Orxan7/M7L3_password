@@ -24,6 +24,19 @@ pip install pytest
 pytest
 ```
 
+## Тесты:
+Тест, что при генерации используются только допустимые символы
+'''bash
+def test_password_characters():
+    valid_characters = string.ascii_letters + string.digits + string.punctuation
+    password = generate_password(100)  # Генерируем длинный пароль для более надежной проверки
+    for char in password:
+        assert char in valid_characters
+'''
+
+
+
+
 ## Автор
 
-Kodland
+Kodland, Zioles
