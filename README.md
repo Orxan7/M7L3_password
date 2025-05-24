@@ -23,7 +23,7 @@ pip install pytest
 ```bash
 pytest
 ```
-  j
 ## Автор
 
 Kodland
+Kanada
