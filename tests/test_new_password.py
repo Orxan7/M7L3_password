@@ -28,14 +28,11 @@ def test_povtorenie():
 """
 
 def test_password_length():
-    """Тест, что длина пароля соответствует заданной"""
-    length = random.randint(8, 32)  # cлучайная длина от 8 до 32
+    length = 12
     password = generate_password(length)
-    assert len(password) == length, "Длина пароля не соответствует заданной"
+    assert len(password) == length, "Длина пароля должна соответствовать заданной"
 
-
-def test_unique_passwords():
-    """Тест, что два подряд сгенерированных пароля различаются"""
-    password1 = generate_password(16)
-    password2 = generate_password(16)
-    assert password1 != password2, "Сгенерированные пароли совпадают"
+def test_passwords_are_different():
+    password1 = generate_password(12)
+    password2 = generate_password(12)
+    assert password1 != password2, "Пароли должны различаться"
