@@ -23,7 +23,7 @@ pip install pytest
 ```bash
 pytest
 ```
-## Автор
-
+## Авто
 Kodland
-Kanada
+        
+vKanada
