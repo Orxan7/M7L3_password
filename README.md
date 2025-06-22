@@ -53,9 +53,4 @@ def test_povtorenie():
 
 ## Автор
 
-Kodland, Zioles
-
-  j
-## Автор
-
 Kodland
